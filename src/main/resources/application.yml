@@ -1,3 +1,6 @@
 spring:
   application:
     name: demo
+
+github:
+  url: https://api.github.com/

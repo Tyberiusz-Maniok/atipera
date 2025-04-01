@@ -3,6 +3,7 @@ package com.example.demo.repos.github;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
+import java.util.List;
 import java.util.Map;
 
 @Data
@@ -22,4 +23,6 @@ public class Repo {
 
     @JsonProperty("branches_url")
     private String branchesUrl;
+
+    private List<Branch> branches;
 }
