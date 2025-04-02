@@ -7,7 +7,6 @@
 		<spring.version>3.4.4</spring.version>
 		<lombok.version>1.18.36</lombok.version>
 		<mapstruct.version>1.6.3</mapstruct.version>
-		<mockserver.version>5.15.0</mockserver.version>
 	</properties>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -24,6 +23,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<version>${spring.version}</version>
 		</dependency>
 
 		<dependency>
@@ -40,17 +40,8 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
+			<version>${spring.version}</version>
 			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.mock-server</groupId>
-			<artifactId>mockserver-netty-no-dependencies</artifactId>
-			<version>${mockserver.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.mock-server</groupId>
-			<artifactId>mockserver-client-java-no-dependencies</artifactId>
-			<version>${mockserver.version}</version>
 		</dependency>
 	</dependencies>
 
@@ -87,14 +78,6 @@
 					<jvmArguments>
 						-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005
 					</jvmArguments>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.mock-server</groupId>
-				<artifactId>mockserver-maven-plugin</artifactId>
-				<version>${mockserver.version}</version>
-				<configuration>
-					<serverPort>1080</serverPort>
 				</configuration>
 			</plugin>
 		</plugins>
