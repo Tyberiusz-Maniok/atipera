@@ -3,4 +3,4 @@ spring:
     name: demo
 
 github:
-  api: https://api.github.com/
+  api: localhost:1080
